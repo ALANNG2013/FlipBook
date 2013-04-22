@@ -1,7 +1,7 @@
 FlipBook
 ========
 
-HTML5 Web dssign
+HTML5 Web design
 
 Web project in HKSHP
 
