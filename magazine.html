@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="turn.min.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
+  var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+  if (ieversion>=9)
+  {
+   document.write("You're using IE9 or above. 歡迎登入 人文特刊")
+   }
+  else if (ieversion>=8)
+  {
+   document.write("You're using IE8 or above")
+   alert("You're using the Internet Explorer browser IE8 or above. Please use IE9.0 to browse this page. ")
+   }
+  else if (ieversion>=7)
+  {
+   document.write("You're using IE7.x")
+   alert("You're using the Internet Explorer browser IE7 or above. Please use IE9.0 to browse this page. ")
+   }
+  else if (ieversion>=6)
+  {
+   document.write("You're using IE6.x")
+   alert("You're using the Internet Explorer browser IE6 or above. Please use IE9.0 to browse this page. ")
+   }
+  else if (ieversion>=5)
+  {
+   document.write("You're using IE5.x")
+   alert("You're using the Internet Explorer browser IE5 or above. Please use IE9.0 to browse this page. ")
+   }
+ }
+ else
+   document.write("歡迎登入 人文學會")
+</script>
+
+<style type="text/css">
+body{
+  background:#ccc;
+}
+#magazine{
+	width:1152px;
+	height:752px;
+}
+#magazine .turn-page{
+	background-color:#ccc;
+	background-size:100% 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="magazine">
+	<div style="background-image:url(01.jpg);"></div>
+	<div style="background-image:url(02.jpg);"></div>
+	<div style="background-image:url(03.jpg);"></div>
+	<div style="background-image:url(04.jpg);"></div>
+	<div style="background-image:url(05.jpg);"></div>
+    <div style="background-image:url(06.jpg);"></div>
+    <div style="background-image:url(07.jpg);"></div>
+	<div style="background-image:url(08.jpg);"></div>
+	<div style="background-image:url(09.jpg);"></div>
+	<div style="background-image:url(10.jpg);"></div>
+	<div style="background-image:url(11.jpg);"></div>
+    <div style="background-image:url(12.jpg);"></div>
+    <div style="background-image:url(13.jpg);"></div>
+	
+</div>
+
+<script type="text/javascript">
+
+	$(window).ready(function() {
+		$('#magazine').turn({
+							display: 'double',
+							acceleration: true,
+							gradients: !$.isTouch,
+							elevation:50,
+							when: {
+								turned: function(e, page) {
+									/*console.log('Current view: ', $(this).turn('view'));*/
+								}
+							}
+						});
+	});
+	
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+			
+	});
+
+</script>
+
+</body>
+</html>
