@@ -3,7 +3,7 @@ FlipBook
 
 HTML5 Web design
 
-Page flip effect in HTML5
+Page flip effect with HTML5
 
 Web project in HKSHP
 
