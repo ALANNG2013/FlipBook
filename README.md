@@ -7,5 +7,5 @@ Page flip effect in HTML5
 
 Web project in HKSHP
 
-http://www.hkshp.org
+HTTP://www.hkshp.org/magazine/magazine1.html
 
